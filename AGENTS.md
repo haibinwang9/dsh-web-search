@@ -15,7 +15,9 @@ It is a port of [nicobailon/pi-web-access](https://github.com/nicobailon/pi-web-
 - `cordis.patch.yml` — sets `web.searchProvider: web-access` and inserts the host plugin row
 - `dsh.plugin.json` — ecosystem plugin manifest (id / version / client main)
 - `lib/index.js` — host half: fetch-based HTTP layer, search providers + fallback chain,
-  content extraction, the `get_search_content` tool, and the `web-access` providers
+  the `get_search_content` tool, and the `web-access` providers
+- `lib/parse.js` — zero-dependency parsing helpers (htmlToText, parseDdg, …), imported by
+  `lib/index.js` and unit-tested directly (keeps tests free of harness dependencies)
 - `lib/client.js` — browser half: settings card (`settings.plugin.item` slot)
 - `tests/parse.test.mjs` — unit tests for the pure parsing/extraction helpers
 

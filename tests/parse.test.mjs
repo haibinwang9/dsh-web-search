@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { decodeEntities, htmlToText, decodeDdgUrl, parseDdg } from '../lib/index.js'
+import { decodeEntities, htmlToText, decodeDdgUrl, parseDdg } from '../lib/parse.js'
 
 test('decodeEntities handles common entities and code points', () => {
   assert.equal(decodeEntities('a&nbsp;b &amp; c &lt;x&gt;'), 'a b & c <x>')
