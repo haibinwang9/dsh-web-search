@@ -1,0 +1,16 @@
+{
+  "id": "dsh-external/dsh-web-search",
+  "version": "0.1.0",
+  "main": "./lib/index.js",
+  "description": "Web access plugin for the DeepSeek Harness: multi-provider search fallback (SearXNG → Tavily → Brave → keyless DuckDuckGo) plus URL content extraction, ported from pi-web-access",
+  "engines": {
+    "dsh": ">=0.0.1"
+  },
+  "contributes": {
+    "tools": [],
+    "skills": []
+  },
+  "client": {
+    "main": "./lib/client.js"
+  }
+}

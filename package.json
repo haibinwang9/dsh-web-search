@@ -1,0 +1,68 @@
+{
+  "name": "dsh-web-search",
+  "version": "0.1.0",
+  "description": "pi-web-access for the DeepSeek Harness: multi-provider web search with automatic fallback (SearXNG → Tavily → Brave → keyless DuckDuckGo) plus URL content extraction, wired into the web seam so the built-in web_search tool is powered by piwa. Search engine toggle and API keys are configurable from the DSH settings page.",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "cordis.patch.yml",
+    "dsh.plugin.json",
+    "AGENTS.md",
+    "LICENSE",
+    "README.md",
+    "README.en.md"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "web-search",
+    "pi-web-access",
+    "searxng",
+    "tavily",
+    "brave",
+    "duckduckgo"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-api-remotes"
+      ],
+      "platform": "web"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haibinwang9/dsh-web-search"
+  },
+  "homepage": "https://github.com/haibinwang9/dsh-web-search",
+  "bugs": {
+    "url": "https://github.com/haibinwang9/dsh-web-search/issues"
+  },
+  "author": "haibinwang9",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.6",
+    "@deepseek-ai/dsh-credentials": "^0.1.0-rc.6",
+    "@deepseek-ai/dsh-web-search-deepseek": "^0.1.0-rc.6"
+  }
+}

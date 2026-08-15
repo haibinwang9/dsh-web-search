@@ -1,0 +1,13 @@
+# dsh-web-search bundle layer: one host plugin row + default search engine switch.
+# Provides the 'web-access' search/fetch providers into the web seam (the fetch seam had no
+# provider at all, so this registration also makes web_fetch usable).
+# The default search engine points to piwa (overrides dsh-web-search-tavily's config);
+# the settings card can switch it off — when off, the piwa provider delegates back to the
+# official DeepSeek search. On = replace the official search, off = official search.
+- id: web
+  config:
+    searchProvider: web-access
+
+- insert:
+    - id: web-access
+      name: dsh-web-search

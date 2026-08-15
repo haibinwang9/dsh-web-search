@@ -1,0 +1,4 @@
+# dependencies resolved against the DSH install (local dev only)
+node_modules/
+.DS_Store
+*.log
