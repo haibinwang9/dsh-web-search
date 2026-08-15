@@ -2,6 +2,10 @@
 
 [中文](README.md) · [English](README.en.md)
 
+[![npm version](https://img.shields.io/npm/v/dsh-web-search.svg)](https://www.npmjs.com/package/dsh-web-search)
+[![License: MIT](https://img.shields.io/npm/l/dsh-web-search.svg)](https://opensource.org/licenses/MIT)
+[![CI](https://img.shields.io/github/actions/workflow/status/haibinwang9/dsh-web-search/ci.yml)](https://github.com/haibinwang9/dsh-web-search/actions)
+
 > **Ported from [nicobailon/pi-web-access](https://github.com/nicobailon/pi-web-access)** (MIT) for the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness): the search fallback chain, the DuckDuckGo parser and the content-extraction logic come from that project, adapted to use native Node `fetch`. Thanks to the original author.
 
 ## What it does
@@ -14,20 +18,22 @@
 - 🛠️ **Completes the fetch seam** — registers both search and fetch providers, which also makes the built-in `web_fetch` usable (the fetch seam normally has no provider).
 - ⚙️ **All configuration in the settings page** — the three keys (SearXNG / Tavily / Brave) are managed as cards in the harness credentials service; no config files to edit.
 
-## Quick start
+## Install
 
-### Install from npm
+**From npm (recommended):**
 
 ```sh
 dsh plugin --profile web add dsh-web-search
 ```
 
-
+**From source:**
 
 ```sh
-dsh plugin --profile web add .   # local source install; npm install below
-# restart DSH, then configure keys/toggle at Settings → Plugins → Web access
+git clone https://github.com/haibinwang9/dsh-web-search.git
+cd dsh-web-search && dsh plugin --profile web add .
 ```
+
+Restart DSH after installing, then configure keys/toggle at **Settings → Plugins → Web access**.
 
 ## Configuration
 

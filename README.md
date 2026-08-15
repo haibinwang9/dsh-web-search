@@ -2,6 +2,10 @@
 
 [中文](README.md) · [English](README.en.md)
 
+[![npm version](https://img.shields.io/npm/v/dsh-web-search.svg)](https://www.npmjs.com/package/dsh-web-search)
+[![License: MIT](https://img.shields.io/npm/l/dsh-web-search.svg)](https://opensource.org/licenses/MIT)
+[![CI](https://img.shields.io/github/actions/workflow/status/haibinwang9/dsh-web-search/ci.yml)](https://github.com/haibinwang9/dsh-web-search/actions)
+
 > **本插件移植自 [nicobailon/pi-web-access](https://github.com/nicobailon/pi-web-access)**（MIT），为 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 适配：搜索回退链、DuckDuckGo 解析与正文提取逻辑源自该项目，网络层改用 Node 原生 `fetch`。感谢原作者。
 
 ## 它能做什么
@@ -14,18 +18,22 @@
 - 🛠️ **补齐 fetch seam** —— 注册搜索 + 抓取双 provider，内置 `web_fetch` 因此恢复可用
 - ⚙️ **配置全部在设置页** —— 三个密钥（SearXNG / Tavily / Brave）写入 credentials 服务，卡片式管理，无需改配置文件
 
-## 快速开始
+## 安装
 
-```sh
-dsh plugin --profile web add .   # 本地源码安装；npm 安装见下
-# 重启 DSH 后，设置 → 插件 → Web access 里配置密钥/开关即可
-```
-
-### 从 npm 安装
+**从 npm 安装（推荐）：**
 
 ```sh
 dsh plugin --profile web add dsh-web-search
 ```
+
+**从源码安装：**
+
+```sh
+git clone https://github.com/haibinwang9/dsh-web-search.git
+cd dsh-web-search && dsh plugin --profile web add .
+```
+
+安装后重启 DSH，在 **设置 → 插件 → Web access** 里配置密钥/开关即可。
 
 ## 配置项
 
