@@ -1,6 +1,6 @@
 {
   "name": "dsh-web-search",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "pi-web-access for the DeepSeek Harness: multi-provider web search with automatic fallback (SearXNG → Tavily → Brave → keyless DuckDuckGo) plus URL content extraction, wired into the web seam so the built-in web_search tool is powered by piwa. Search engine toggle and API keys are configurable from the DSH settings page.",
   "license": "MIT",
   "type": "module",
