@@ -61,8 +61,8 @@
     "access": "public"
   },
   "peerDependencies": {
-    "@deepseek-ai/dsh-tools": "^0.1.0-rc.6",
-    "@deepseek-ai/dsh-credentials": "^0.1.0-rc.6",
-    "@deepseek-ai/dsh-web-search-deepseek": "^0.1.0-rc.6"
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.6 || ^0.2.2-rc.1",
+    "@deepseek-ai/dsh-credentials": "^0.1.0-rc.6 || ^0.2.2-rc.1",
+    "@deepseek-ai/dsh-web-search-deepseek": "^0.1.0-rc.6 || ^0.2.2-rc.1"
   }
 }
